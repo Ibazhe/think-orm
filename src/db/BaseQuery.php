@@ -177,6 +177,10 @@ abstract class BaseQuery
             $query->lazyFields($this->options['lazy_fields']);
         }
 
+        if (isset($this->options['alias'])) {
+            $query->alias($this->options['alias']);
+        }
+
         return $query;
     }
 
